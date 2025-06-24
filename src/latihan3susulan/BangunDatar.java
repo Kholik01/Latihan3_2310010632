@@ -11,6 +11,19 @@ public class BangunDatar {
     double jariJari;
     double hasil;
 
+    // Constructor
+    public BangunDatar() {
+        alas = 0;
+        tinggi = 0;
+        jariJari = 0;
+        hasil = 0;
+    }
+
+    // Method accessor untuk mengembalikan nilai hasil
+    public double getHasil() {
+        return hasil;
+    }
+
     // Method untuk menghitung luas segitiga
     public void hitungLuasSegitiga() {
         hasil = 0.5 * alas * tinggi;
@@ -25,12 +38,14 @@ public class BangunDatar {
 
     public static void main(String[] args) {
         BangunDatar bd = new BangunDatar();
-        
-        bd.alas = 5;
-        bd.tinggi = 4;
+
+        bd.alas = 6;
+        bd.tinggi = 8;
         bd.hitungLuasSegitiga();
-        
-        bd.jariJari = 7;
+        System.out.println("Nilai hasil (akses melalui accessor): " + bd.getHasil());
+
+        bd.jariJari = 10;
         bd.hitungLuasLingkaran();
+        System.out.println("Nilai hasil (akses melalui accessor): " + bd.getHasil());
     }
 }
